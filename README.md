@@ -30,8 +30,8 @@ Node.js - Express Microservice for shopping cart - without database
 
 ### Endpoints ###
 
-ACTION | URI
--------------
+ACTION | URI 
+-------|-----
 List All Items | GET/api/items/listAllItems
 Add a new Item | POST/api/items
 Delete Item by Id|DELETE/api/items/:itemId
