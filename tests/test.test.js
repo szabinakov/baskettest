@@ -29,3 +29,11 @@ describe("DELETE /api/items/:itemId", () => {
         expect(res.body.length).to.equal(items.length - 1)
     })
 })
+
+describe("DELETE /api/items", () => {
+    it("empty basket(items array) completely, returns 200 statuscode if success", async () => {
+        const res = await request(app).delete('/api/items')
+         expect(res.status).to.equal(200); 
+         expect(res.body.length).to.equal(0)
+    })
+})
