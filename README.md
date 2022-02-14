@@ -1,12 +1,12 @@
-#Intro#
+# Intro #
 Node.js - Express Microservice for shopping cart - without database
-##Main capabilities:##
-*Endpoint for adding an item
-*Endpoint for removing an item
-*Endpoint for clearing the entire basket
-*Endpoint for listing all the items, ONLY showing their ID, title, price
+## Main capabilities: ##
+* Endpoint for adding an item
+* Endpoint for removing an item
+* Endpoint for clearing the entire basket
+* Endpoint for listing all the items, ONLY showing their ID, title, price
 
-##Technology:##
+## Technology: ##
 * [Node.js](https://nodejs.org/en/) - as an asynchronous event-driven JavaScript runtime, Node.js is designed to build scalable network applications
 * [Express](https://expressjs.com/) - is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
 * [Nodemon](https://www.npmjs.com/package/nodemon) - When you launch your node. js application with Nodemon it will monitor for any changes and automatically restart the server, improving your productivity.
@@ -15,14 +15,16 @@ Node.js - Express Microservice for shopping cart - without database
 * [Supertest](https://www.npmjs.com/package/supertest) - A library for testing node.js HTTP servers
 * [Postman](https://www.postman.com/) - Used for manual testing 
 
-Start the app:
-Make sure Nodejs and NPM are installed and their PATHs defined 
+## Start the app: ##
+- Make sure Nodejs and NPM are installed and their PATHs defined 
 
-After cloning the repository, cd into folder.
-install dependencies with npm install
+- After cloning the repository, cd into folder.
+- Install dependencies with:
+```npm install```
+- You can start server on port 3000 with:
+```npm start```
+- Start with nodemon instead: (nodemon will watch and update all your changes without restarting server)
+```npm run dev```
 
-with npm start you can start the server on port 3000
-with npm run dev you can start server with nodemon, which will watch for any changes
-
-The application uses data.js for presenting some data, you can use Postman to modify with sending POST,GET or DELETE requests.
+#### The application uses data.js for presenting some data, you can use Postman to modify with sending POST,GET or DELETE requests.####
 
