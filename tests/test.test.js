@@ -1,6 +1,7 @@
 const {expect} = require("chai")
 const request = require('supertest')
 const app = require("../src/app")
+let items = require("../data")
 
 describe("POST /api/items", () => {
     it("Endpoint for adding an item to basket, shows statuscode 200, and checks if the last item in basket is the added item", async () => {
@@ -18,5 +19,13 @@ describe("POST /api/items", () => {
          expect(res.body[res.body.length - 1].deliveryDay).to.equal(3); 
          expect(res.body[res.body.length - 1].id).to.equal(10); 
 
+    })
+})
+
+describe("DELETE /api/items/:itemId", () => {
+    it("deletes item by item id, returns 200 statuscode if success", async () => {
+        const res = await request(app).delete(`/api/items/${items[2].id}`)
+        expect(res.status).to.equal(200); 
+        expect(res.body.length).to.equal(items.length - 1)
     })
 })
