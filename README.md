@@ -1,12 +1,12 @@
-# Intro #
+# Intro 
 Node.js - Express Microservice for shopping cart - without database
-## Main capabilities: ##
+## Main capabilities: 
 * Endpoint for adding an item
 * Endpoint for removing an item
 * Endpoint for clearing the entire basket
 * Endpoint for listing all the items, ONLY showing their ID, title, price
 
-## Technology: ##
+## Technology: 
 * [Node.js](https://nodejs.org/en/) - as an asynchronous event-driven JavaScript runtime, Node.js is designed to build scalable network applications
 * [Express](https://expressjs.com/) - is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
 * [Nodemon](https://www.npmjs.com/package/nodemon) - When you launch your node. js application with Nodemon it will monitor for any changes and automatically restart the server, improving your productivity.
@@ -15,7 +15,7 @@ Node.js - Express Microservice for shopping cart - without database
 * [Supertest](https://www.npmjs.com/package/supertest) - A library for testing node.js HTTP servers
 * [Postman](https://www.postman.com/) - Used for manual testing 
 
-## Start the app: ##
+## Start the app:
 - Make sure Nodejs and NPM are installed and their PATHs defined 
 
 - After cloning the repository, cd into folder.
@@ -26,14 +26,28 @@ Node.js - Express Microservice for shopping cart - without database
 - Start with nodemon instead: (nodemon will watch and update all your changes without restarting server)
 ```npm run dev```
 
-#### The application uses data.js for presenting some data, you can use Postman to modify with sending POST,GET or DELETE requests.####
+#### The application uses data.js for presenting some data, you can use Postman to modify with sending POST,GET or DELETE requests.
 
-### Endpoints ###
+### Endpoints
 
 ACTION | URI 
 -------|-----
-List All Items | GET/api/items/listAllItems
-Add a new Item | POST/api/items
-Delete Item by Id|DELETE/api/items/:itemId
-Empty the basket|DELETE/api/items/
+List All Items | `GET /api/items/listAllItems`
+Add a new Item | `POST /api/items`
+Delete Item by Id | `DELETE /api/items/:itemId`
+Empty the basket | `DELETE /api/items/`
 
+## Technology Choice
+Some of the main reasons to chose node.js for eCommerce app:
+* Cross-platform compatible
+* Highly scalable
+* Good performance (event drive design)
+* Allow to use Javascript on back-end and front-end 
+
+## Explanation of future development 
+#### Database:
+The main points to consider to chose the correct database SQL or noSQL is the consistancy of the data and scalability. 
+* noSQL: Applications that use data which does not have set structure and comes in very large volumes does not need a complex database model to be developed, which means easy scalability but the lack of structure makes it harder to keep track of every detail.
+* SQL: Very useful when the data is structured and mostly consistent. Columns and rows make it easier to generate statistics and to keep an organised record of everything that happens in the app. SQL databases are more time consuming and more expensive to create. 
+
+I would chose MySQL relational database for future dev as in a shopping cart wouldnt require a lots of upgrades/changes and the data would be always consistent and well structured.
