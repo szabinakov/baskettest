@@ -6,4 +6,6 @@ router.post("/", itemController.addNewItem)
 
 router.delete("/:itemId", itemController.removeItemById)
 
+router.delete("/", itemController.emptyBasket)
+
 module.exports = router
