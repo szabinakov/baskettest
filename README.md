@@ -28,3 +28,12 @@ Node.js - Express Microservice for shopping cart - without database
 
 #### The application uses data.js for presenting some data, you can use Postman to modify with sending POST,GET or DELETE requests.####
 
+### Endpoints ###
+
+ACTION | URI
+-------------
+List All Items | GET/api/items/listAllItems
+Add a new Item | POST/api/items
+Delete Item by Id|DELETE/api/items/:itemId
+Empty the basket|DELETE/api/items/
+
