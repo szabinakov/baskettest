@@ -3,6 +3,21 @@ const request = require('supertest')
 const app = require("../src/app")
 let items = require("../data")
 
+describe("GET /api/items/listAllItems", () => {
+    it("shows statuscode 200 and all the items in basket", async () => {
+        const res = await request(app).get("/api/items/listAllItems")
+
+        expect(res.status).to.equal(200);   
+
+        expect(res.body[0]).to.have.property('id');
+        expect(res.body[0]).to.have.property('title');
+        expect(res.body[0]).to.have.property('price');
+        expect(res.body[0].id).to.equal(1);
+        expect(res.body[0].title).to.equal('Item1');
+        expect(res.body[0].price).to.equal(100);
+    })
+})
+
 describe("POST /api/items", () => {
     it("Endpoint for adding an item to basket, shows statuscode 200, and checks if the last item in basket is the added item", async () => {
         const res = await request(app).post('/api/items').send({
@@ -12,12 +27,12 @@ describe("POST /api/items", () => {
             deliveryDay: 3,
             id: 10
         })
-         expect(res.status).to.equal(200); 
-         expect(res.body[res.body.length - 1].title).to.equal("Item10"); 
-         expect(res.body[res.body.length - 1].price).to.equal(20); 
-         expect(res.body[res.body.length - 1].weight).to.equal(23); 
-         expect(res.body[res.body.length - 1].deliveryDay).to.equal(3); 
-         expect(res.body[res.body.length - 1].id).to.equal(10); 
+        expect(res.status).to.equal(200); 
+        expect(res.body[res.body.length - 1].title).to.equal("Item10"); 
+        expect(res.body[res.body.length - 1].price).to.equal(20); 
+        expect(res.body[res.body.length - 1].weight).to.equal(23); 
+        expect(res.body[res.body.length - 1].deliveryDay).to.equal(3); 
+        expect(res.body[res.body.length - 1].id).to.equal(10); 
 
     })
 })
@@ -33,7 +48,8 @@ describe("DELETE /api/items/:itemId", () => {
 describe("DELETE /api/items", () => {
     it("empty basket(items array) completely, returns 200 statuscode if success", async () => {
         const res = await request(app).delete('/api/items')
-         expect(res.status).to.equal(200); 
-         expect(res.body.length).to.equal(0)
+        expect(res.status).to.equal(200); 
+        expect(res.body.length).to.equal(0)
     })
 })
+
