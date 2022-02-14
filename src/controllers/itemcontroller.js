@@ -38,3 +38,21 @@ exports.emptyBasket = (_,res) => {
     }
 }
 
+exports.listAllItems = (_,res) => {
+    try {
+        class Item {
+            constructor(id, title, price){
+                this.id = id;
+                this.title = title;
+                this.price = price
+            }
+        }
+        // Used items from data.js to present some data
+        let allItems = items.map((element) =>{
+            return new Item(element.id, element.title, element.price)
+        })
+        res.status(200).json(allItems)
+    } catch(error){
+        res.status(500).json({error: "Internal Server Error"})
+    }
+}
