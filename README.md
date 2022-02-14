@@ -46,8 +46,8 @@ Some of the main reasons to chose node.js for eCommerce app:
 
 ## Explanation of future development 
 #### Database:
-The main points to consider to chose the correct database SQL or noSQL is the consistancy of the data and scalability. 
-* noSQL: Applications that use data which does not have set structure and comes in very large volumes does not need a complex database model to be developed, which means easy scalability but the lack of structure makes it harder to keep track of every detail.
-* SQL: Very useful when the data is structured and mostly consistent. Columns and rows make it easier to generate statistics and to keep an organised record of everything that happens in the app. SQL databases are more time consuming and more expensive to create. 
+The main points to consider in choosing the correct database SQL or noSQL is the consistency of the data and scalability. 
+* noSQL: Applications that use data that does not have a set structure and comes in very large volumes do not need a complex database model to be developed, which means easy scalability but the lack of structure makes it harder to keep track of every detail.
+* SQL: Very useful when the data is structured and mostly consistent. Columns and rows make it easier to generate statistics and to keep an organised record of everything that happens in the app. SQL databases are more time-consuming and more expensive to create. 
 
-I would chose MySQL relational database for future dev as in a shopping cart wouldnt require a lots of upgrades/changes and the data would be always consistent and well structured.
+I would choose MySQL relational database for future dev as a shopping cart wouldn't require a lot of upgrades/changes and the data would be always consistent and well structured.
