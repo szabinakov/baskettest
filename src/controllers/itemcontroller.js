@@ -26,3 +26,15 @@ exports.removeItemById = async(req,res) => {
         res.status(500).json({ error: "Internal Server Error"})
     }
 }
+
+
+exports.emptyBasket = (_,res) => {
+    // for presentation using items from data.js
+    try{    
+        items = []
+        res.status(200).json(items)
+    } catch(error){
+        res.status(500).json({error: "Internal Server Error"})
+    }
+}
+
