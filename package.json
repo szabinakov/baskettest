@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/szabinakov/baskettest/issues"
   },
-  "homepage": "https://github.com/szabinakov/baskettest#readme"
+  "homepage": "https://github.com/szabinakov/baskettest#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
 }
