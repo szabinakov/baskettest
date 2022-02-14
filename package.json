@@ -1,0 +1,19 @@
+{
+  "name": "baskettest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/szabinakov/baskettest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/szabinakov/baskettest/issues"
+  },
+  "homepage": "https://github.com/szabinakov/baskettest#readme"
+}
